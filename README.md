@@ -1,0 +1,1 @@
+Progetto rispettante dei principi SOLID e della buona programmazione creato per ottemperare al solo e unico scopo di stampare a schermo una lista di stringhe in java.

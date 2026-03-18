@@ -1,4 +1,4 @@
-package cs.mdp.unicam;
+package cs.mdp.unicam.writer;
 
 import cs.mdp.unicam.writable.WritableElement;
 

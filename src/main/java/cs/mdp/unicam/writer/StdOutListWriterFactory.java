@@ -1,27 +1,26 @@
 package cs.mdp.unicam.writer;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 
 public class StdOutListWriterFactory implements AbstractListWriterFactory {
 
-    private final List<FixingWritingOption> options;
+    private final LinkedHashSet<FixingWritingOption> options;
 
     public StdOutListWriterFactory(){
-        options = new LinkedList<>();
+        options = new LinkedHashSet<>();
     }
 
     @Override
     public void addSetting(FixingWritingOption option) {
-        for (FixingWritingOption op : options) {
-            if(op == option) return;
-        }
-        options.add(option);
+        options.addLast(option);
     }
 
     @Override
     public AbstractWriter create() {
-        return new StdOutWriter(options);
+        return new StdOutWriter(new ArrayList<>(this.options));
     }
 
 }
